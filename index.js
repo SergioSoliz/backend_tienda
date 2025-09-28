@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use(express.static("public"));
 
-const YOUR_DOMAIN = "cursos.clubinfinitychess.com";
+const YOUR_DOMAIN = "https://cursos.clubinfinitychess.com";
 app.use(express.json());
 
 app.post("/create-checkout-session", async (req, res) => {
@@ -53,4 +53,5 @@ app.get("/session-status", async (req, res) => {
     payment_intent_status: session.payment_intent.status,
   });
 });
-app.listen(4242, () => console.log("Running on port 4242"));
+const PORT = process.env.PORT || 4242;
+app.listen(PORT, () => console.log(`Running on port ${PORT}`));

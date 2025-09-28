@@ -53,5 +53,3 @@ app.get("/session-status", async (req, res) => {
     payment_intent_status: session.payment_intent.status,
   });
 });
-
-app.listen(4242, () => console.log("Running on port 4242"));

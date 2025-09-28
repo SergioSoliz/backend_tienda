@@ -17,7 +17,7 @@ const YOUR_DOMAIN = "cursos.clubinfinitychess.com";
 app.use(express.json());
 
 app.post("/create-checkout-session", async (req, res) => {
-  const { productId, price } = req.body;
+  //const { productId, price } = req.body;
   const session = await stripe.checkout.sessions.create({
     ui_mode: "custom",
     line_items: [

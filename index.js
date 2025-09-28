@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use(express.static("public"));
 
-const YOUR_DOMAIN = "http://localhost:3000";
+const YOUR_DOMAIN = "cursos.clubinfinitychess.com";
 app.use(express.json());
 
 app.post("/create-checkout-session", async (req, res) => {
